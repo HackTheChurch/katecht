@@ -1,4 +1,5 @@
 import UserButton from "@/components/auth/user-button";
+import Navigation from "@/components/navigation";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/theme/toggle-button";
 import type { Metadata } from "next";
@@ -25,7 +26,11 @@ export default function RootLayout({
             <ModeToggle />
             <UserButton />
           </div>
-          <div className="mx-auto max-w-2xl">{children}</div>
+
+          <div className="mx-auto max-w-2xl">
+            <Navigation />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>

@@ -1,13 +1,13 @@
 version: "3.8"
 services:
   template-db:
-    container_name: template-db
+    container_name: vesmirna-pomoc-db
     image: postgres:14.1-alpine
     restart: always
     environment:
-      - POSTGRES_USER=littleBunny
-      - POSTGRES_PASSWORD=hopHopHop
+      - POSTGRES_USER=vesmirna-pomoc
+      - POSTGRES_PASSWORD=pomocNesmirna
     ports:
-      - "6543:5432"
+      - "7654:5432"
     volumes:
       - ./data:/var/lib/postgresql/data

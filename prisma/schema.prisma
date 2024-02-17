@@ -42,6 +42,13 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+
+  // APP SPECIFIC
+  isAdmin         Boolean       @default(true)
+  isPlayerInTeams Group[]       @relation("GroupPlayers")
+  isCoachInTeams  Group[]       @relation("GroupCoaches")
+  RunTemplate     RunTemplate[]
+  Run             Answer[]
 }
 
 model VerificationToken {
@@ -50,4 +57,63 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+// APPLICATION SPECIFIC
+model Group {
+  id           String        @id @default(cuid())
+  name         String
+  description  String?
+  players      User[]        @relation("GroupPlayers")
+  coaches      User[]        @relation("GroupCoaches")
+  questionRuns RunTemplate[]
+}
+
+model RunTemplate {
+  id          String     @id @default(cuid())
+  createdById String
+  createdBy   User       @relation(fields: [createdById], references: [id])
+  description String?
+  tags        Tag[]
+  questions   Question[]
+  answers     Answer[]
+  groupId     String
+  group       Group      @relation(fields: [groupId], references: [id])
+}
+
+model Tag {
+  id            String       @id @default(cuid())
+  name          String
+  description   String?
+  RunTemplate   RunTemplate? @relation(fields: [runTemplateId], references: [id])
+  runTemplateId String?
+  Question      Question?    @relation(fields: [questionId], references: [id])
+  questionId    String?
+}
+
+model Answer {
+  id String @id @default(cuid())
+
+  runId         String
+  answer        Int
+  correct       Boolean
+  answeredById  String
+  answeredBy    User        @relation(fields: [answeredById], references: [id])
+  finishAt      DateTime    @default(now())
+  runTemplateId String
+  runTemplate   RunTemplate @relation(fields: [runTemplateId], references: [id])
+  questionId    String
+  question      Question    @relation(fields: [questionId], references: [id])
+  answerSetId   String?
+}
+
+model Question {
+  id            String      @id @default(cuid())
+  question      String
+  answers       String[]
+  correct       Int
+  runTemplateId String
+  RunTemplate   RunTemplate @relation(fields: [runTemplateId], references: [id])
+  tags          Tag[]
+  Answer        Answer[]
 }

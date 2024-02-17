@@ -1,0 +1,11 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "driver": "PostgreSQL",
+      "name": "vesmirna-pomoc",
+      "connectString": "postgresql://vesmirna-pomoc:pomocNesmirna@localhost:7654/database?connection_limit=5&pool_timeout=2"
+    }
+  ]
+}
