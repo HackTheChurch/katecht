@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/vojtech-cerveny/nextjs-auth-template/compare/v0.1.1...v0.1.2) (2024-02-17)
+
+### Features
+
+- adding open-ai + small fixes ([950d474](https://github.com/vojtech-cerveny/nextjs-auth-template/commit/950d474ec9692333f0e037af8ba28c9c59c0e772))
+
+### Bug Fixes
+
+- metadata ([11420a2](https://github.com/vojtech-cerveny/nextjs-auth-template/commit/11420a2cd93d2010c2482a70ddab51ccb2644387))
+
 ### 0.1.1 (2024-02-09)
 
 ### Features
