@@ -33,19 +33,23 @@ export default async function GroupPage({ params }: { params: { id: string } }) 
 
       <CardContent>
         <H2>Katecheti</H2>
-        {group.coaches.map((coach) => (
-          <Avatar>
-            <AvatarImage src={coach.image || ""} alt={coach.name || ""} />
-            <AvatarFallback>{getInitials(coach.name || "")}</AvatarFallback>
-          </Avatar>
-        ))}
+        <div className="flex flex-row -space-x-3">
+          {group.coaches.map((coach) => (
+            <Avatar>
+              <AvatarImage src={coach.image || ""} alt={coach.name || ""} />
+              <AvatarFallback>{getInitials(coach.name || "")}</AvatarFallback>
+            </Avatar>
+          ))}
+        </div>
         <H2>Hraci</H2>
-        {group.players.map((coach) => (
-          <Avatar>
-            <AvatarImage src={coach.image || ""} alt={coach.name || ""} />
-            <AvatarFallback>{getInitials(coach.name || "")}</AvatarFallback>
-          </Avatar>
-        ))}
+        <div className="flex flex-row -space-x-3">
+          {group.players.map((coach) => (
+            <Avatar>
+              <AvatarImage src={coach.image || ""} alt={coach.name || ""} />
+              <AvatarFallback>{getInitials(coach.name || "")}</AvatarFallback>
+            </Avatar>
+          ))}
+        </div>
 
         <H2>Run templates</H2>
         <div className="flex flex-col gap-4">

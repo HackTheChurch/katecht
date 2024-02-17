@@ -1,4 +1,4 @@
-import { H1, H2 } from "@/components/typography";
+import { H1, H2, H3 } from "@/components/typography";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { getAnswerStatsForRunGroupedByUser } from "@/domain/answer/answer-repository";
@@ -27,8 +27,8 @@ export default async function RunPage({ params }: { params: { id: string } }) {
   return (
     <div>
       <H1>Run {params.id}</H1>
-      <H2>Description: {run.description}</H2>
-      <H2>Questions: {run.questions.length}</H2>
+      <p>Description + Question: {run.description}</p>
+      <H3>Questions: {run.questions.length}</H3>
       <H2>Board</H2>
       <Table>
         <TableCaption>Board of best players</TableCaption>
@@ -44,7 +44,7 @@ export default async function RunPage({ params }: { params: { id: string } }) {
         </TableHeader>
         <TableBody>
           {data.map((row, index) => (
-            <TableRow>
+            <TableRow key={index}>
               <TableCell className="font-medium">{index + 1}</TableCell>
               <TableCell className="font-medium">{row.playerName}</TableCell>
               <TableCell>{row.correctAnswers + row.incorrectAnswers}</TableCell>

@@ -30,6 +30,8 @@ export default async function RunPage({
     };
   });
 
+  const sortedData = data.sort((a, b) => b.percentage - a.percentage);
+
   function getBackgroundColorClass(percentage: number) {
     if (percentage >= 75) {
       return "to-green-800"; // Green for 75% and above
@@ -60,7 +62,7 @@ export default async function RunPage({
           <CardHeader></CardHeader>
           <CardContent>
             <div>
-              <H1>{score}%</H1>
+              <H1>{score.toFixed(2)}%</H1>
             </div>
           </CardContent>
         </Card>
@@ -80,8 +82,8 @@ export default async function RunPage({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {data.map((row, index) => (
-            <TableRow>
+          {sortedData.map((row, index) => (
+            <TableRow key={index}>
               <TableCell className="font-medium">{index + 1}</TableCell>
               <TableCell className="font-medium">{row.playerName}</TableCell>
               <TableCell>{row.correctAnswers + row.incorrectAnswers}</TableCell>

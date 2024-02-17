@@ -117,3 +117,9 @@ model Question {
   tags          Tag[]
   Answer        Answer[]
 }
+
+model AIRecommendation {
+  id          String   @id @default(cuid())
+  json        String
+  createdDate DateTime @default(now())
+}

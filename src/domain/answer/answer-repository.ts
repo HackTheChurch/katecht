@@ -79,6 +79,11 @@ export async function getCountOfCorrectAnswersForRunGroupedByUser(runTemplateId:
       runTemplateId,
       correct: true,
     },
+    orderBy: {
+      _count: {
+        correct: "desc",
+      },
+    },
   });
 }
 

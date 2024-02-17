@@ -1,6 +1,22 @@
-# Boiler plate for nextjs + prisma + nextauth
+# KA✞ECHT
 
-This is basic boilerplate for NextJS (Typescript) + Prisma + Auth.js (GoogleAuth).
+> ✨ "Pray'n'play" ✨
+
+Jsi téměř vyhořelý katecht, který by chtěl atraktivním způsobem zaujmout mladé pro prohlubování znalostí v otázkách víry a církve? Aplikace Katecht je tu přesně pro tebe!
+
+## Motivace & Jaký problém řešíme
+
+Rozhodli jsme vytvořit hru, která by měla být využitelná jak pro katechety na běžnou výuku náboženství, tak i pro společenství mladých a nebo i klidně pro větší akce jako CSM apod. K hraní vás může motivovat jak celkové top skóre nebo jen soutěžení ve vaší skupině.
+
+Chceme nabídnout i možnost vytvoření svých vlastních okruhů otázek nebo využití okruhů, co vytvořili už i ostatní uživatelé. Mladším generacím chceme přiblížit nedělní evangelium, ke kterému vždy vyjde týdenní okruh a k němu bychom chtěli přidat komentář kněze.
+Hlavním cílem je nadchnout mladé k poznávání a vytvořit pro ně atraktivní formu výuky a také usnadnit práci katechetům.
+
+Využití najde u:
+
+- katechetů a animátorů, kteří připravují program svým svěřencům
+- duchovních, kteří chtějí atraktivní formou ověřit znalosti svých farníků
+- pořadatele masových akcí pro mládež, kteří chtějí spestřit svou apikaci zábavnou hrou
+- všem mladým i méně mladým, kteří chtějí prohloubit svoje znalosti v oblastech víry i církve
 
 ## Contains
 
@@ -15,6 +31,7 @@ This is basic boilerplate for NextJS (Typescript) + Prisma + Auth.js (GoogleAuth
 ## Setup
 
 1. Setup GoogleAuth - follow [official documentation](https://next-auth.js.org/providers/google)
+1. OpenAI API
 1. `mv .env.example .env` - and fill environment variables
 1. Run docker image with database
    - `docker compose up -d`
@@ -41,7 +58,7 @@ It take cares about session :) Thats all - you can add providers (Github, MS), s
 
 Check `./auth.ts` for more info or [official documentation](https://authjs.dev/getting-started/introduction)
 
-**Note:** After some time of development, it starts failing due too many clients to DB. I tried to fix it by adding prisma into singleton, but it didn't help. If you know how to resolve it, please fill the PR for it.
+**Note:** After some time of development, it starts failing due too many clients to DB. I tried to fix it by adding prisma into singleton, but it didn't help. If you know how to resolve it, please fill the PR for it. 🙏
 
 ### shadcn/ui
 

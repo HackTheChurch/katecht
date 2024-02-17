@@ -36,7 +36,6 @@ export default async function RunPage({
       runId! as string,
     );
 
-    console.log(response);
     if (actual + 1 === Number(count)) {
       redirect(`/run/${params.id}/result?runId=${runId}`);
     } else {

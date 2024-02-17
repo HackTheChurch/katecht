@@ -5,7 +5,6 @@ import { addRunTemplateToGroup } from "../questions/questions-repository";
 
 export async function createRunTemplate(runTemplate: Prisma.RunTemplateCreateInput, groupId: string) {
   try {
-    console.log(runTemplate);
     const createdRunTemplate = await prisma.runTemplate.create({
       data: runTemplate,
       include: {
@@ -13,7 +12,6 @@ export async function createRunTemplate(runTemplate: Prisma.RunTemplateCreateInp
       },
     });
 
-    console.log(createdRunTemplate);
     await addRunTemplateToGroup(createdRunTemplate.id, groupId);
 
     revalidatePath("/groups");
