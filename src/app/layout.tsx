@@ -2,6 +2,7 @@ import UserButton from "@/components/auth/user-button";
 import Navigation from "@/components/navigation";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/theme/toggle-button";
+import { H1 } from "@/components/typography";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -28,6 +29,7 @@ export default function RootLayout({
           </div>
 
           <div className="mx-auto max-w-2xl">
+            <H1>Ka✞echt</H1>
             <Navigation />
             {children}
           </div>

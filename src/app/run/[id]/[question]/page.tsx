@@ -56,13 +56,17 @@ export default async function RunPage({
       <form action={handleAnswer}>
         <RadioGroup name="answer" className="mt-4 ">
           {run.questions[actual].answers.map((answer, index) => (
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 ">
               <RadioGroupItem id={index.toString()} value={index.toString()} />
-              <Label htmlFor={index.toString()}>{answer}</Label>
+              <Label className="text-2xl" htmlFor={index.toString()}>
+                {answer}
+              </Label>
             </div>
           ))}
         </RadioGroup>
-        <Button type="submit">NEXT</Button>
+        <Button className="mt-4 w-full" type="submit">
+          NEXT
+        </Button>
       </form>
     </div>
   );

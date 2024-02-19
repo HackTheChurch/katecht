@@ -2,6 +2,8 @@
 
 > ✨ "Pray'n'play" ✨
 
+- [PREZENTACE](https://www.canva.com/design/DAF8_taEjHM/gokPa9zZH3mYRzFolEGaYw/edit)
+
 Jsi téměř vyhořelý katecht, který by chtěl atraktivním způsobem zaujmout mladé pro prohlubování znalostí v otázkách víry a církve? Aplikace Katecht je tu přesně pro tebe!
 
 ## Motivace & Jaký problém řešíme

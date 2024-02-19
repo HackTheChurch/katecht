@@ -61,7 +61,10 @@ export default async function GroupPage({ params }: { params: { id: string } }) 
                 className="flex flex-row items-center justify-between gap-4 duration-300 hover:shadow-lg"
               >
                 <CardHeader>
-                  <CardTitle>{runTemplate.description}</CardTitle>
+                  <CardTitle>
+                    {runTemplate.description!.substring(0, 100)}
+                    {runTemplate.description!.length > 100 && <>...</>}
+                  </CardTitle>
                   <CardDescription>
                     {runTemplate.questions.length} questions / {uniqueUsers.length} players played{" "}
                   </CardDescription>
