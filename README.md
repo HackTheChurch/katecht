@@ -22,7 +22,7 @@ Využití najde u:
 
 ## Demo
 
-[![Watch the video](./demo/demo.mp4)]
+https://github.com/HackTheChurch/katecht/assets/12935892/7d1eaa71-90e6-4ccd-9f40-808ed174393c
 
 ## Contains
 
