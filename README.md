@@ -20,6 +20,10 @@ Využití najde u:
 - pořadatele masových akcí pro mládež, kteří chtějí spestřit svou apikaci zábavnou hrou
 - všem mladým i méně mladým, kteří chtějí prohloubit svoje znalosti v oblastech víry i církve
 
+## Demo
+
+[![Watch the video](./demo/screenshot.png)](./demo/demo.mp4)
+
 ## Contains
 
 - Docker container for Postgresql
