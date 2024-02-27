@@ -3,6 +3,7 @@
 > ✨ "Pray'n'play" ✨
 
 - [PREZENTACE](https://www.canva.com/design/DAF8_taEjHM/gokPa9zZH3mYRzFolEGaYw/edit)
+- [PROTOTYP MOBILNÍ APLIKACE](https://www.figma.com/file/QUsWcViBaCiyY7nc7Q2PdC/%40shadcn%2Fui---Design-System-(Community)?type=design&node-id=104%3A1180&mode=design&t=OXeq5whQFUSLfaqw-1)
 
 Jsi téměř vyhořelý katecht, který by chtěl atraktivním způsobem zaujmout mladé pro prohlubování znalostí v otázkách víry a církve? Aplikace Katecht je tu přesně pro tebe!
 
