@@ -22,7 +22,7 @@ Využití najde u:
 
 ## Demo
 
-[![Watch the video](./demo/screenshot.png)](./demo/demo.mp4)
+[![Watch the video](./demo/demo.mp4)]
 
 ## Contains
 
